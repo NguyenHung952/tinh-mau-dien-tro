@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi màu điện trở</title>
+    <style>
+        /* Background gradient huyền ảo */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px;
+        }
+
+        /* Container có hiệu ứng đổ bóng 3D */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            width: 90%;
+            max-width: 450px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        /* Dropdown select đẹp hơn */
+        select, button {
+            margin: 10px;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            width: 85%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s ease;
+        }
+
+        select {
+            background: rgba(255, 255, 255, 0.3);
+            color: black;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+
+        /* Nút bấm có hiệu ứng hover */
+        button {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        button:hover {
+            background: #ff9900;
+            transform: scale(1.05);
+            border: 1px solid white;
+        }
+
+        /* Kết quả nổi bật */
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Bảng mã màu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🎨 Chuyển đổi mã màu điện trở 🎨</h2>
+
+        <div class="color-selection">
+            <label for="band1">🟠 Chọn màu vòng 1:</label>
+            <select id="band1"></select>
+        </div>
+
+        <div class="color-selection">
+            <label for="band2">🟡 Chọn màu vòng 2:</label>
+            <select id="band2"></select>
+        </div>
+
+        <div class="color-selection">
+            <label for="band3">🔵 Chọn màu vòng 3:</label>
+            <select id="band3"></select>
+        </div>
+
+        <div class="color-selection">
+            <label for="multiplier">⚫ Chọn màu vòng nhân:</label>
+            <select id="multiplier"></select>
+        </div>
+
+        <div class="color-selection">
+            <label for="tolerance">⚪ Chọn màu sai số:</label>
+            <select id="tolerance"></select>
+        </div>
+
+        <button onclick="calculateResistance()">📊 Tính toán</button>
+        
+        <p id="result"></p>
+        
+        <h2>📋 Bảng mã màu điện trở</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Màu</th>
+                    <th>Giá trị</th>
+                    <th>Hệ số nhân</th>
+                    <th>Độ chính xác</th>
+                </tr>
+            </thead>
+            <tbody id="colorTableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const colorCodes = [
+            { color: "Đen", value: 0, multiplier: 1, tolerance: "-" },
+            { color: "Nâu", value: 1, multiplier: 10, tolerance: "±1%" },
+            { color: "Đỏ", value: 2, multiplier: 100, tolerance: "±2%" },
+            { color: "Cam", value: 3, multiplier: 1000, tolerance: "-" },
+            { color: "Vàng", value: 4, multiplier: 10000, tolerance: "-" },
+            { color: "Xanh lục", value: 5, multiplier: 100000, tolerance: "±0.5%" },
+            { color: "Xanh dương", value: 6, multiplier: 1000000, tolerance: "±0.25%" },
+            { color: "Tím", value: 7, multiplier: 10000000, tolerance: "±0.1%" },
+            { color: "Xám", value: 8, multiplier: 100000000, tolerance: "±0.05%" },
+            { color: "Trắng", value: 9, multiplier: 1000000000, tolerance: "-" },
+            { color: "Vàng kim", value: "-", multiplier: 0.1, tolerance: "±5%" },
+            { color: "Bạc", value: "-", multiplier: 0.01, tolerance: "±10%" }
+        ];
+        
+        function populateSelect(id) {
+            let select = document.getElementById(id);
+            colorCodes.forEach(color => {
+                let option = document.createElement("option");
+                option.value = color.value;
+                option.textContent = color.color;
+                select.appendChild(option);
+            });
+        }
+        
+        function calculateResistance() {
+            let band1 = document.getElementById("band1").value;
+            let band2 = document.getElementById("band2").value;
+            let band3 = document.getElementById("band3").value;
+            let multiplier = document.getElementById("multiplier").value;
+            let tolerance = document.getElementById("tolerance").options[document.getElementById("tolerance").selectedIndex].text;
+            
+            let resistance = (parseInt(band1) * 100 + parseInt(band2) * 10 + parseInt(band3)) * parseFloat(multiplier);
+            document.getElementById("result").innerText = `⚡ Giá trị điện trở: ${resistance}Ω ± ${tolerance}`;
+        }
+        
+        function generateColorTable() {
+            let tableBody = document.getElementById("colorTableBody");
+            colorCodes.forEach(color => {
+                let row = `<tr>
+                    <td>${color.color}</td>
+                    <td>${color.value}</td>
+                    <td>${color.multiplier}</td>
+                    <td>${color.tolerance}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+        
+        ["band1", "band2", "band3", "multiplier", "tolerance"].forEach(id => populateSelect(id));
+        generateColorTable();
+    </script>
+
+</body>
+</html>
