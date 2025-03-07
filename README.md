@@ -1,0 +1,1 @@
+# tinh-mau-dien-tro
