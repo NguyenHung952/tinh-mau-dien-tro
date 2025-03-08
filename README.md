@@ -1,6 +1,5 @@
-Dưới đây là **mô tả (description)** hoàn chỉnh cho dự án **"Chuyển đổi màu điện trở"** của bạn. Bạn có thể sử dụng nội dung này cho **README.md** trên GitHub để giúp người khác hiểu về dự án. 🚀  
 
----
+
 
 # 🎨 Chuyển Đổi Mã Màu Điện Trở 🎨  
 ### 🎯 Công cụ chuyển đổi mã màu điện trở thành giá trị điện trở thực tế  
@@ -68,6 +67,4 @@ Dự án này được phát triển với mục đích **học tập và phi l�
 
 Chúc bạn sử dụng vui vẻ! 🎨✨ **Nếu thấy hay, hãy ⭐ repository này nhé!** 🚀📏  
 
----
 
-Bạn có muốn bổ sung gì vào phần mô tả này không? 😎🔥
