@@ -45,9 +45,7 @@ git clone https://github.com/YOUR-USERNAME/resistor-color-code.git
 2️⃣ Mở file `index.html` trong trình duyệt.  
 3️⃣ Chọn màu điện trở và kiểm tra giá trị.  
 
-### 🌍 **2. Chạy trên Google Site**  
-Bạn có thể sử dụng chương trình bằng cách truy cập vào:
-https://sites.google.com/view/mycodinz/t%C3%ADnh-m%C3%A0u-%C4%91i%E1%BB%87n-tr%E1%BB%9F
+
 
 ---
 
