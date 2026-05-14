@@ -1,68 +1,153 @@
+# 🎨 Chuyển Đổi Mã Màu Điện Trở 🎨
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-Web-orange?style=for-the-badge&logo=html5">
+  <img src="https://img.shields.io/badge/CSS3-Responsive-blue?style=for-the-badge&logo=css3">
+  <img src="https://img.shields.io/badge/JavaScript-Interactive-yellow?style=for-the-badge&logo=javascript">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+</p>
 
-
-# 🎨 Chuyển Đổi Mã Màu Điện Trở 🎨  
-### 🎯 Công cụ chuyển đổi mã màu điện trở thành giá trị điện trở thực tế  
-
-**Chuyển đổi màu điện trở** là một công cụ trực tuyến giúp bạn dễ dàng tính toán giá trị điện trở dựa trên **mã màu tiêu chuẩn**. Người dùng chỉ cần chọn màu sắc của các vòng trên điện trở, hệ thống sẽ tự động tính toán và hiển thị kết quả.  
-
----
-
-## 🌟 **Tính năng chính**  
-✔️ **Chuyển đổi mã màu thành giá trị điện trở chính xác**.  
-✔️ **Hiển thị sai số & hệ số nhân** theo từng màu sắc.  
-✔️ **Bảng tra cứu mã màu tiêu chuẩn của điện trở**.  
-✔️ **Giao diện trực quan, dễ sử dụng trên mọi thiết bị**.  
+<p align="center">
+  🔧 Công cụ chuyển đổi mã màu điện trở thành giá trị điện trở thực tế nhanh chóng và trực quan.
+</p>
 
 ---
 
-## 🎮 **Cách sử dụng**  
-1️⃣ **Chọn màu sắc** cho từng vòng điện trở (1, 2, 3, hệ số nhân, sai số).  
-2️⃣ **Nhấn "📊 Tính toán"** để nhận kết quả giá trị điện trở.  
-3️⃣ **Xem giá trị điện trở tính được**, bao gồm cả sai số.  
-4️⃣ **Tra cứu bảng mã màu điện trở** để hiểu rõ hơn về từng màu.  
+# 📖 Giới thiệu
+
+**Chuyển Đổi Mã Màu Điện Trở** là một web tool hỗ trợ tính toán giá trị điện trở dựa trên mã màu tiêu chuẩn của các vòng màu trên điện trở.
+
+Người dùng chỉ cần:
+
+- Chọn màu các vòng điện trở
+- Hệ thống tự động tính toán
+- Hiển thị giá trị điện trở tương ứng
+- Hỗ trợ đọc sai số và hệ số nhân
+
+Ứng dụng phù hợp cho:
+
+- Sinh viên điện – điện tử
+- Người học mạch điện cơ bản
+- Kỹ thuật viên điện tử
+- Người mới học linh kiện điện tử
 
 ---
 
-## 📂 **Cấu trúc thư mục**  
+# 🚀 Demo
+
+🔗 Live Demo:
+
+```bash
+https://nguyenhung952.github.io/
 ```
-resistor-color-code/
-│── index.html      # Giao diện HTML chính
-│── styles.css      # Định dạng giao diện
-│── script.js       # Xử lý logic chuyển đổi mã màu
-└── README.md       # Mô tả dự án
+
+---
+
+# 📂 Cấu trúc Project
+
+```bash
+tinh-mau-dien-tro/
+│
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 ```
 
 ---
 
-## 🚀 **Cách chạy dự án**  
+# 🛠 Công nghệ sử dụng
 
-### 🖥️ **1. Chạy trên máy tính**  
-1️⃣ Clone hoặc tải mã nguồn về máy:  
-```sh
-git clone https://github.com/YOUR-USERNAME/resistor-color-code.git
+| Công nghệ | Vai trò |
+|---|---|
+| HTML5 | Xây dựng giao diện |
+| CSS3 | Thiết kế UI |
+| JavaScript | Xử lý logic tính toán |
+
+---
+
+# ⚙️ Chức năng chính
+
+## 📌 Chọn mã màu điện trở
+- Hỗ trợ nhiều vòng màu
+- Chọn màu trực quan
+
+## 📌 Tính toán tự động
+- Giá trị điện trở
+- Hệ số nhân
+- Sai số điện trở
+
+## 📌 Hiển thị kết quả
+- Đơn vị Ω / kΩ / MΩ
+- Kết quả theo thời gian thực
+- Dễ đọc và trực quan
+
+---
+
+# 🧠 Kiến thức áp dụng
+
+Project sử dụng các kiến thức:
+
+- Điện tử cơ bản
+- Quy ước mã màu điện trở
+- JavaScript DOM
+- Event Handling
+- Responsive Web Design
+
+---
+
+# 📸 Điểm nổi bật
+
+✨ Giao diện đơn giản, trực quan  
+✨ Dễ sử dụng cho người mới học  
+✨ Chạy trực tiếp trên trình duyệt  
+✨ Không cần cài đặt phần mềm  
+✨ Hỗ trợ học tập điện tử cơ bản
+
+---
+
+# ▶️ Cách chạy project
+
+## Clone repository
+
+```bash
+git clone https://github.com/your-username/tinh-mau-dien-tro.git
 ```
-2️⃣ Mở file `index.html` trong trình duyệt.  
-3️⃣ Chọn màu điện trở và kiểm tra giá trị.  
 
+## Chạy ứng dụng
 
+Mở file:
 
----
+```bash
+index.html
+```
 
-## 🎯 **Đóng góp & Cải tiến**  
-Nếu bạn muốn cải thiện dự án, hãy làm theo các bước sau:  
-1️⃣ **Fork** repository này.  
-2️⃣ Tạo một **branch mới** với tính năng bạn muốn thêm.  
-3️⃣ **Commit** thay đổi và **push** lên GitHub.  
-4️⃣ Gửi **pull request** để mình xem xét! 🚀  
+bằng trình duyệt để sử dụng.
 
 ---
 
-## 📜 **Bản quyền & Giấy phép**  
-Dự án này được phát triển với mục đích **học tập và phi lợi nhuận**. Bạn có thể sử dụng, chỉnh sửa và chia sẻ thoải mái.  
+# 🎯 Mục tiêu dự án
+
+- Hỗ trợ học tập điện tử cơ bản
+- Thực hành JavaScript xử lý logic
+- Xây dựng công cụ kỹ thuật thực tế
+- Cải thiện kỹ năng frontend development
 
 ---
 
-Chúc bạn sử dụng vui vẻ! 🎨✨ **Nếu thấy hay, hãy ⭐ repository này nhé!** 🚀📏  
+# 👨‍💻 Author
 
+**Nguyễn Ngọc Hùng**  
+Sinh viên Điện tử Viễn thông – IUH
 
+---
+
+# ⭐ Support
+
+Nếu project hữu ích, hãy để lại một ⭐ cho repository.
+
+---
+
+<p align="center">
+  Made with ❤️ using HTML • CSS • JavaScript
+</p>
