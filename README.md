@@ -1,25 +1,40 @@
-# Tính màu điện trở
+# 🎨 Tính màu điện trở
 
-Ứng dụng web hỗ trợ **tính giá trị điện trở từ mã màu**, phù hợp cho học tập và tra cứu nhanh trong điện tử cơ bản.
+> Công cụ web tra cứu và tính **giá trị điện trở từ mã màu**, thiết kế cho việc học và thực hành điện tử cơ bản.
 
-## Cấu trúc
+## ✨ Tính năng
+
+- Chọn các vòng màu của điện trở.
+- Tính giá trị điện trở theo mã màu.
+- Hiển thị kết quả trực tiếp trên giao diện.
+- Chạy hoàn toàn phía trình duyệt.
+
+## 🧱 Cấu trúc
 
 ```text
 tinh-mau-dien-tro/
-├── index.html
-├── script.js
-├── styles.css
+├── index.html      # Giao diện
+├── script.js       # Logic tính toán
+├── styles.css      # UI
 └── README.md
 ```
 
-## Thành phần
+## 🚀 Sử dụng
 
-- `index.html`: giao diện nhập mã màu.
-- `script.js`: xử lý tính toán giá trị điện trở.
-- `styles.css`: giao diện.
+Mở `index.html` bằng trình duyệt hiện đại. Không cần cài backend.
 
-## Mục đích
+## 🛠️ Công nghệ
 
-Giúp xác định nhanh giá trị điện trở và các thông tin liên quan từ các vòng màu.
+`HTML5` · `CSS3` · `JavaScript`
 
-> Mã nguồn hiện có được giữ nguyên; chỉ chuẩn hóa README.
+## 🎓 Mục đích
+
+Hỗ trợ sinh viên nhanh chóng kiểm tra **điện trở danh định và mã màu**, đồng thời thực hành cách xây dựng công cụ tính toán bằng JavaScript.
+
+## 📌 Trạng thái
+
+**Learning / Electronics Utility** — chỉ chuẩn hóa tài liệu, không thay đổi logic hiện có.
+
+---
+
+**Nguyễn Ngọc Hùng · IUH**
